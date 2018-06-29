@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<style type="text/css">
+		#myCanvas {
+			border: 1px solid #ADACB0;
+			display: block;
+			margin: 20px auto;
+		}
+		.edge {
+			outline: none;
+			border: 1px solid #ADACB0;
+			border-radius: 5px;
+			height: 28px;
+			width: 200px;
+			font-size: 16px;
+		}
+	</style>
+	<title>mesh</title>
+</head>
+<body>
+<div id="app">
+	<!--<canvas id="myCanvas" width="800" height="800"></canvas>-->
+	<div class="operation_button_container">
+		<button id="draw">开始画图</button>
+		<button id="clear">清除</button>
+	</div>
+	<div class="user_parameters">
+		<div style="margin-top: 20px">
+			<label for="inregular_edge">边数(至少为3, 默认为4):</label>
+			<input id="inregular_edge" class="edge" type="number" placeholder="请输入不规则图形边数">
+		</div>
+	</div>
+</div>
+<script src="./start.js" type="text/javascript"></script>
+</body>
+</html>

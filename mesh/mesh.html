@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<style type="text/css">
+		#myCanvas {
+			border: 1px solid #ADACB0;
+			display: block;
+			margin: 20px auto;
+		}
+		.edge {
+			outline: none;
+			border: 1px solid #ADACB0;
+			border-radius: 5px;
+			height: 28px;
+			width: 180px;
+			font-size: 14px;
+		}
+        button[disabled="true"] {
+            cursor: not-allowed;
+        }
+	</style>
+	<title>mesh</title>
+</head>
+<body>
+<div id="app">
+	<!--<canvas id="myCanvas" width="800" height="800"></canvas>-->
+	<div class="operation_button_container">
+		<button id="draw">初始化参数</button>
+		<button id="clear">清除</button>
+        <button id="start" disabled="true">开始</button>
+        <button id="finish" disabled="true">结束</button>
+	</div>
+</div>
+<div class="user_parameters">
+	<div style="margin-top: 20px">
+		<label for="horizontal_edge">横向网格段(默认为10):</label>
+		<input id="horizontal_edge" min="2" class="edge" type="number" placeholder="请输入横向网格划分段">
+	</div>
+	<div style="margin-top: 20px">
+		<label for="vertical_edge">竖向网格段(默认为10):</label>
+		<input id="vertical_edge" min="2" class="edge" type="number" placeholder="请输入竖向网格划分段">
+	</div>
+	<div style="margin-top: 20px">
+		<label for="person_num">房间人数(默认为10):</label>
+		<input id="person_num" min="1" class="edge" type="number" placeholder="请输入房间人数">
+	</div>
+    <div style="margin-top: 20px" >
+        <label for="person_speed">人群移动速度(默认为1):</label>
+        <input id="person_speed" min="0" class="edge" type="number" placeholder="请输入人群移动速度">(1s移动多少网格)
+    </div>
+</div>
+<script src="./start.js" type="text/javascript"></script>
+</body>
+</html>
